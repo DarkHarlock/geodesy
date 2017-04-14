@@ -146,6 +146,7 @@
 
         var A = a / (1 + n) * (1 + 1 / 4 * n2 + 1 / 64 * n4 + 1 / 256 * n6); // 2πA is the circumference of a meridian
 
+        /* eslint-disable indent */
         var α = [ null, // note α is one-based array (6th order Krüger expressions)
             1 / 2 * n - 2 / 3 * n2 + 5 / 16 * n3 +   41 / 180 * n4 -     127 / 288 * n5 +      7891 / 37800 * n6,
                       13 / 48 * n2 -  3 / 5 * n3 + 557 / 1440 * n4 +     281 / 630 * n5 - 1983433 / 1935360 * n6,
@@ -153,6 +154,7 @@
                                                49561 / 161280 * n4 -     179 / 168 * n5 + 6601661 / 7257600 * n6,
                                                                      34729 / 80640 * n5 - 3418889 / 1995840 * n6,
                                                                                       212378941 / 319334400 * n6 ];
+        /* eslint-enable indent */
 
         var ξ = ξʹ;
         for (var j = 1; j <= 6; j++) ξ += α[j] * Math.sin(2 * j * ξʹ) * Math.cosh(2 * j * ηʹ);
@@ -240,6 +242,7 @@
         var η = x / (k0 * A);
         var ξ = y / (k0 * A);
 
+        /* eslint-disable indent */
         var β = [ null, // note β is one-based array (6th order Krüger expressions)
             1 / 2 * n - 2 / 3 * n2 + 37 / 96 * n3 -    1 / 360 * n4 -   81 / 512 * n5 +    96199 / 604800 * n6,
                        1 / 48 * n2 +  1 / 15 * n3 - 437 / 1440 * n4 +   46 / 105 * n5 - 1118711 / 3870720 * n6,
@@ -247,6 +250,7 @@
                                                  4397 / 161280 * n4 -   11 / 504 * n5 -  830251 / 7257600 * n6,
                                                                    4583 / 161280 * n5 -  108847 / 3991680 * n6,
                                                                                      20648693 / 638668800 * n6 ];
+        /* eslint-enable indent */
 
         var ξʹ = ξ;
         for (var j = 1; j <= 6; j++) ξʹ -= β[j] * Math.sin(2 * j * ξ) * Math.cosh(2 * j * η);
