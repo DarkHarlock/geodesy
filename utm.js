@@ -28,8 +28,6 @@
     // eslint-disable-next-line strict
     'use strict';
 
-    if (typeof module != 'undefined' && module.exports) var LatLon = require('./latlon-ellipsoidal.js'); // ≡ import LatLon from 'latlon-ellipsoidal.js'
-
 
     /**
      * Convert between Universal Transverse Mercator coordinates and WGS 84 latitude/longitude points.
