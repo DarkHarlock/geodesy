@@ -27,9 +27,9 @@
   "main": "npm.js",
   "bugs": "https://github.com/chrisveness/geodesy/issues",
   "scripts": {
-    "test-node": "mocha test/*.js",
-    "test-chrome": "karma start --single-run",
-    "test": "mocha test/*.js & karma start --single-run",
+    "test-node": "mocha test/*-tests.js",
+    "test-chrome": "karma start --single-run & karma start karma.conf.html.js --single-run",
+    "test": "mocha test/*-tests.js & karma start --single-run & karma start karma.conf.html.js --single-run",
     "lint": "eslint ."
   },
   "devDependencies": {
