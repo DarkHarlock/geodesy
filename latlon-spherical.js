@@ -21,7 +21,10 @@
         module.exports = factory(require('./dms.js'));
     } else {
         // Browser globals (root is window)
-        root.LatLon = factory(root.Dms);
+        root.LatLonSpherical = factory(root.Dms);
+        if (!root.LatLon) {
+            root.LatLon = root.LatLonSpherical;
+        }
     }
 }(this, function (Dms) {
     // eslint-disable-next-line strict

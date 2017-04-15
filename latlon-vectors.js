@@ -21,7 +21,10 @@
         module.exports = factory(require('./vector3d.js'), require('./dms.js'));
     } else {
         // Browser globals (root is window)
-        root.LatLon = factory(root.Vector3d, root.Dms);
+        root.LatLonVectors = factory(root.Vector3d, root.Dms);
+        if (!root.LatLon) {
+            root.LatLon = root.LatLonVectors;
+        }
     }
 
 }(this, function (Vector3d, Dms) {

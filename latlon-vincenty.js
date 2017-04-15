@@ -21,7 +21,10 @@
         module.exports = factory(require('./latlon-ellipsoidal.js'));
     } else {
         // Browser globals (root is window)
-        root.LatLon = factory(root.LatLon);
+        if (!root.LatLonEllipsoidal) {
+            throw 'vincenty is only supported on ellipsoidal LatLon class!';
+        }
+        factory(root.LatLonEllipsoidal);
     }
 
 }(this, function (LatLon) {
