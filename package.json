@@ -24,7 +24,8 @@
   "author": "Chris Veness",
   "version": "1.1.1",
   "license": "MIT",
-  "main": "npm.js",
+  "main": "./npm.js",
+  "types": "./typings/npm.d.ts",
   "bugs": "https://github.com/chrisveness/geodesy/issues",
   "scripts": {
     "test-node": "mocha test/*-tests.js",
