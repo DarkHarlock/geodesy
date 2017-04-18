@@ -13,7 +13,7 @@ declare var LatLonVectorsStatic: LatLonVectorsStatic;
 declare interface LatLonVectorsStatic {
     new (lat: number, lon: number): LatLonVectors.LatLonVectors;
     (lat: number, lon: number): LatLonVectors.LatLonVectors;
-    intersection(path1start: LatLonVectors.LatLonVectors, path1brngEnd: LatLonVectors.LatLonVectors | number, path2start: LatLonVectors.LatLonVectors, path2brngEnd: LatLonVectors.LatLonVectors | number);
+    intersection(path1start: LatLonVectors.LatLonVectors, path1brngEnd: LatLonVectors.LatLonVectors | number, path2start: LatLonVectors.LatLonVectors, path2brngEnd: LatLonVectors.LatLonVectors | number): LatLonVectors.LatLonVectors;
     areaOf(polygon: LatLonVectors.LatLonVectors[], radius?: number): number;
     meanOf(points: LatLonVectors.LatLonVectors[]): LatLonVectors.LatLonVectors;
 }
